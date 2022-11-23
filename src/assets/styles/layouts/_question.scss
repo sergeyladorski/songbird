@@ -1,0 +1,130 @@
+.question {
+  max-width: $width-content-desctop;
+  width: 100%;
+  background: $color-dark-gray;
+  box-sizing: border-box;
+  border: 1px solid $color-gray;
+  border-radius: 20px;
+  padding: 20px 40px 20px 20px;
+  display: grid;
+  gap: 0 40px;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+
+  @media screen and(max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .question__bird-image {
+    width: 200px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 5px;
+    @include grid-position(1, 1, 2, 3);
+  }
+
+  .question__bird-name {
+    @include grid-position(2, 1, 3, 2);
+    margin: 0;
+    padding: 0 0 20px;
+    border-bottom: 1px solid $color-gray-smoke;
+
+    @media screen and(max-width: 600px) {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .player {
+    @include grid-position(2, 2, 3, 3);
+    display: grid;
+    gap: 0 20px;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+
+    @media screen and(max-width: 600px) {
+      width: 100%;
+    }
+
+    .player__button {
+      width: 40px;
+      height: 40px;
+      background: none;
+      background: url(../images/icons/play-icon.svg);
+      background-size: contain;
+      border: none;
+      padding: 0;
+      @include grid-position(1, 1, 2, 3);
+      cursor: pointer;
+
+      &:hover {
+        filter: invert(44%) sepia(95%) saturate(739%) hue-rotate(126deg) brightness(97%) contrast(101%);
+        transition: all 0.5s ease;
+      }
+    }
+
+    .pause {
+      background: url(../images/icons/pause-icon.svg);
+      background-size: contain;
+    }
+
+    .player__time-bar {
+      @include grid-position(2, 1, 3, 2);
+      background-color: transparent;
+      appearance: none;
+      -webkit-appearance: none;
+
+      &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 5px;
+        background: $color-medium-gray;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+          background: $color-white;
+          transition: all 0.5s ease;
+        }
+      }
+
+      &::-webkit-slider-thumb {
+        margin-top: -5px;
+        width: 16px;
+        height: 16px;
+        background: $color-light-gray;
+        border-radius: 50%;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+
+        &:hover {
+          background: $color-white;
+          transition: all 0.5s ease;
+        }
+      }
+
+      &::-webkit-slider-thumb:active {
+        background: $color-light-green;
+        transition: 0.3s;
+
+        &:hover {
+          background: $color-white;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+
+    .player__current-time {
+      @include grid-position(2, 2, 3, 3);
+      justify-self: start;
+    }
+
+    .player__duration {
+      @include grid-position(2, 2, 3, 3);
+      justify-self: end;
+    }
+  }
+}

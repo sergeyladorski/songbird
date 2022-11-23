@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Songbird</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="logo"></div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="./index.html" class="nav__link"></a>
+          </li>
+          <li class="nav__list-item">
+            <a href="./quiz.html" class="nav__link"></a>
+          </li>
+          <li class="nav__list-item">
+            <a href="./gallery.html" class="nav__link"></a>
+          </li>
+        </ul>
+      </nav>
+      <button class="language-button" type="button"></button>
+    </header>
+    <main class="main">
+      <section class="quiz-bar">
+        <ul class="quiz-bar__list">
+          <li class="quiz-bar__item">
+            <p class="quiz-bar__item-text"></p>
+          </li>
+          <li class="quiz-bar__item">
+            <p class="quiz-bar__item-text"></p>
+          </li>
+          <li class="quiz-bar__item">
+            <p class="quiz-bar__item-text"></p>
+          </li>
+          <li class="quiz-bar__item">
+            <p class="quiz-bar__item-text"></p>
+          </li>
+          <li class="quiz-bar__item">
+            <p class="quiz-bar__item-text"></p>
+          </li>
+          <li class="quiz-bar__item">
+            <p class="quiz-bar__item-text"></p>
+          </li>
+        </ul>
+
+        <p class="quiz__score"></p>
+      </section>
+
+      <section class="question">
+        <img src="#" alt="current bird" class="question__bird-image" />
+        <h2 class="question__bird-name"></h2>
+        <div class="player">
+          <button class="player__button question" id="play-question"></button>
+
+          <input
+            type="range"
+            class="player__time-bar"
+            min="0"
+            max="0"
+            value="0"
+          />
+          <span class="player__current-time">00:00</span>
+          <span class="player__duration">00:46</span>
+        </div>
+      </section>
+
+      <section class="answer">
+        <ul class="answer__list"></ul>
+        <div class="answer__info"></div>
+      </section>
+
+      <button class="next-button"></button>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__link" href="https://github.com/sergeyladorski">
+        <img
+          class="footer__link-image"
+          src='<%=require("../../assets/images/logo/github.svg")%>'
+          alt="GitHub"
+        />
+      </a>
+
+      <p class="footer__copyright">&copy; 2022</p>
+
+      <a class="footer__link" href="https://rs.school/js">
+        <img
+          class="footer__link-image"
+          src='<%=require("../../assets/images/logo/rs-school.svg")%>'
+          alt="rs school"
+        />
+      </a>
+    </footer>
+
+    <template class="answer-template">
+      <li class="answer__list-item">
+        <button class="answer__button"></button>
+      </li>
+    </template>
+
+    <template class="bird-info-template">
+      <div class="answer__bird-info">
+        <img src="#" alt="#" class="answer__bird-image" />
+        <h2 class="answer__bird-name"></h2>
+        <p class="answer__bird-latin-name"></p>
+        <div class="player-answer">
+          <button class="player-answer__button" id="play-answer"></button>
+
+          <input
+            type="range"
+            class="player-answer__time-bar"
+            min="0"
+            max="0"
+            value="0"
+          />
+          <span class="player-answer__current-time"></span>
+          <span class="player-answer__duration"></span>
+        </div>
+        <p class="answer__bird-desc"></p>
+      </div>
+    </template>
+  </body>
+</html>

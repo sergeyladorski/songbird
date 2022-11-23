@@ -1,0 +1,15 @@
+.main {
+  width: $width-content-desctop;
+  // width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and(max-width: 1300px) {
+    width: 90vw;
+  }
+
+  @media screen and(max-width: 600px) {
+    gap: 15px;
+  }
+}

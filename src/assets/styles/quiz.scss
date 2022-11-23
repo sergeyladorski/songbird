@@ -1,0 +1,13 @@
+// constants
+@import '_vars';
+@import '_mixins';
+
+// layouts
+@import './layouts/_page.scss';
+@import './layouts/_header.scss';
+@import './layouts/_main.scss';
+@import './layouts/_quiz-bar.scss';
+@import './layouts/_question.scss';
+@import './layouts/_answer.scss';
+@import './layouts/_next-level.scss';
+@import './layouts/_footer.scss';

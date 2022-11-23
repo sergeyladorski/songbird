@@ -1,0 +1,21 @@
+.next-button {
+  max-width: $width-content-desctop;
+  width: 100%;
+  padding: 10px;
+  background: $color-dark-gray;
+  box-sizing: border-box;
+  border: 1px solid $color-gray;
+  border-radius: 5px;
+  font-size: 16px;
+  color: $color-white;
+}
+
+.next-button_active {
+  background: $color-green;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-light-green;
+    transition: all 0.5s ease;
+  }
+}
